@@ -1,12 +1,11 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-import { Button } from '@mui/material'
 import PeopleAltOutlinedIcon from '@mui/icons-material/PeopleAltOutlined';
 import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
 
 import Logo from '../../../src/assets/FendiLogo.png';
 
-import './tab.css'
+import './tab2.css'
 
 export const VerticalTab = () => {
 

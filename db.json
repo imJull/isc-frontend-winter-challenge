@@ -23,6 +23,18 @@
         {
 
         }]
+    },
+    {
+      "nombre": "Dexter",
+      "tipo": "Cliente juridico",
+      "identificacion": 70544587,
+      "telefono": 50186403010,
+      "horario": "4:40pm-5:15pm",
+      "estado": false,
+      "cuentas_por_cobrar": [
+        {
+
+        }]
     }
   ],
   "cuentasPorCobrar": [

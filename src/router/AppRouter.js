@@ -1,9 +1,8 @@
-import { Container } from "@mui/material";
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { ClientesScreen } from "../components/clientes/ClientesScreen";
 import { CuentasCobrarScreen } from "../components/cuentascobrar/CuentasCobrarScreen";
-import { VerticalTab } from "../components/ui/VerticalTab";
+import { MiniDrawer } from "../components/ui/MiniDrawer";
 
 import "./AppRouter.css";
 
@@ -13,7 +12,8 @@ export const AppRouter = () => {
       <div className="general-container">
         
         <div className="item1">
-          <VerticalTab />
+          {/* <VerticalTab /> */}
+          <MiniDrawer />
         </div>
         
         <div className="item2">
