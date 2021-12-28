@@ -1,0 +1,19 @@
+.general-container{
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 3.5fr;
+    grid-gap: 1rem;
+    overflow: hidden;
+    
+}
+
+.item1{
+    border: 1px solid red;
+    overflow: hidden;
+}
+
+.item2{
+    
+    
+}
