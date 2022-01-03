@@ -1,6 +1,7 @@
 {
   "clientes": [
     {
+      "id": 1,
       "nombre": "Dexter Rndle",
       "tipo": "Cliente juridico",
       "identificacion": 11459087,
@@ -8,11 +9,11 @@
       "horario": "8am-10am",
       "estado": true,
       "cuentas_por_cobrar": [
-        {
-
-        }]
+        {}
+      ]
     },
     {
+      "id": 2,
       "nombre": "Norlan Rndle",
       "tipo": "Cliente fisico",
       "identificacion": 11451087,
@@ -20,11 +21,11 @@
       "horario": "10am-11am",
       "estado": true,
       "cuentas_por_cobrar": [
-        {
-
-        }]
+        {}
+      ]
     },
     {
+      "id": 3,
       "nombre": "Dexter",
       "tipo": "Cliente juridico",
       "identificacion": 70544587,
@@ -32,9 +33,71 @@
       "horario": "4:40pm-5:15pm",
       "estado": false,
       "cuentas_por_cobrar": [
-        {
-
-        }]
+        {}
+      ]
+    },
+    {
+      "nombre": "Yung Gucci",
+      "tipo": "Juridico",
+      "identificacion": "1244151",
+      "telefono": "806665455",
+      "horario": "8am - 8.30am",
+      "estado": "Activo",
+      "id": 4
+    },
+    {
+      "nombre": "Lester",
+      "tipo": "Físico",
+      "identificacion": "125888",
+      "telefono": "95959",
+      "horario": "9509509",
+      "estado": "Activo",
+      "id": 5
+    },
+    {
+      "nombre": "asda",
+      "tipo": "asda",
+      "identificacion": "1213",
+      "telefono": "1313",
+      "horario": "313131",
+      "estado": "Activo",
+      "id": 6
+    },
+    {
+      "nombre": "",
+      "tipo": "",
+      "identificacion": 0,
+      "telefono": 0,
+      "horario": "",
+      "estado": "Activo",
+      "id": 7
+    },
+    {
+      "nombre": "as",
+      "tipo": "asad",
+      "identificacion": "12314",
+      "telefono": "0141414",
+      "horario": "12141414",
+      "estado": "Activo",
+      "id": 8
+    },
+    {
+      "nombre": "Andrey",
+      "tipo": "Cliente Jurídico",
+      "identificacion": "135789932",
+      "telefono": "80644599",
+      "horario": "9am-12:40pm",
+      "estado": "Activo",
+      "id": 9
+    },
+    {
+      "nombre": "Asad",
+      "tipo": "Cliente Físico",
+      "identificacion": "01241",
+      "telefono": "0414145",
+      "horario": "123",
+      "estado": "Activo",
+      "id": 10
     }
   ],
   "cuentasPorCobrar": [
@@ -49,16 +112,16 @@
       "abonos": [
         {
           "id": 1242,
-          "metodo_de_pago":"efectivo",
+          "metodo_de_pago": "efectivo",
           "monto": 21500
         }
       ]
     }
   ],
-  "abonos":[
+  "abonos": [
     {
-      "cuenta_por_cobrar_id":12,
-      "id":1,
+      "cuenta_por_cobrar_id": 12,
+      "id": 1,
       "metodo_de_pago": "efectivo",
       "monto": 15000
     }

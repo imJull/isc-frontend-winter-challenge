@@ -1,13 +1,22 @@
-import { Container } from '@mui/material';
 import React, { useContext } from 'react'
 import { CuentaCobrarContex } from '../../hooks/context'
+import { CuentasSrchAddBar } from './CuentasSrchAddBar';
+import { CuentasTopBar } from './CuentasTopBar';
+import { CuentasTable } from './CuentasTable';
+
+import './cuentas.css'
 
 export const CuentasCobrarScreen = () => {
     const cuentasCobrar = useContext(CuentaCobrarContex);
     return (
-        <Container>
-            <h1>Estas son las cuentas por cobrar</h1>   
-            <pre>{JSON.stringify(cuentasCobrar, null, 3)}</pre>
-        </Container>
+        <div className='table-container'>
+            <div className='clientes-container'>
+                <CuentasTopBar />
+                <CuentasSrchAddBar />
+                <CuentasTable cuentasCobrar={cuentasCobrar} />
+
+                <pre>{JSON.stringify(cuentasCobrar, null, 3)}</pre>
+            </div>
+        </div>
     )
 }

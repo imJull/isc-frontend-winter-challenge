@@ -2,16 +2,16 @@ import React from 'react'
 import {TableRow, TableCell} from '@mui/material';
 
 
-export const ClientesTableList = ({cliente}) => {
+export const CuentasTableList = ({cuenta}) => {
   
     return (
         <>
             {
               cliente.map(cli => {
-                const { id, nombre, tipo, identificacion, telefono, horario, estado} = cli;
+                const { nombre, tipo, identificacion, telefono, horario, estado} = cli;
                 return(
                   <TableRow
-                      key={id}
+                      key={identificacion}
                       sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                   >
                     <TableCell component="th" scope="row">{nombre}

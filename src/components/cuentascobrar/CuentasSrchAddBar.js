@@ -1,15 +1,12 @@
 import * as React from 'react';
-import { styled, alpha } from '@mui/material/styles';
+import { styled } from '@mui/material/styles';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import InputBase from '@mui/material/InputBase';
 import SearchIcon from '@mui/icons-material/Search';
-import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
-import { Button } from '@mui/material';
-import { useState } from 'react';
-import { ClienteAdd } from './ClienteAdd';
+
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -48,19 +45,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   },
 }));
 
-export const ClientesSrchAddBar = () => {
-
-  const [open, setOpen] = useState(false);
-
-  const handleClickOpen = () => {
-    setOpen(true);
-  };
-
-  const handleClose = () => {
-    setOpen(false);
-  };
-  
-
+export const CuentasSrchAddBar = () => {
 
   return (
     <Box sx={{ flexGrow: 1, margin:'1rem 0rem'}}>
@@ -84,19 +69,6 @@ export const ClientesSrchAddBar = () => {
           >
             x Clear filters
           </Typography>
-          <Box sx={{ flexGrow: 1 }} />
-          <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
-
-            <Button onClick={handleClickOpen} variant="contained">
-              <AddCircleOutlineIcon />
-              <span style={{marginLeft:"5px"}}>Agregar nuevo Cliente</span>
-            </Button>
-
-            {
-              (open) && <ClienteAdd open={open} handleClose={handleClose} />
-            }
-
-          </Box>
         </Toolbar>
       </AppBar>
     </Box>

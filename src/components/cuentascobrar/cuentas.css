@@ -1,4 +1,4 @@
-.clientes-container{
+.cuentas-container{
     background-color: inherit;
 }
 
@@ -9,21 +9,8 @@
     padding: 1rem;
 }
 
-.table-container p{
-    color: gray;
-    font-weight: 500;
-    font-size: 12px;
-    font-style: italic;
-}
-
 .topbar-container{
     display: flex;
     justify-content: space-around;
     align-items: center;
-}
-
-.agregarbutton{
-    display: flex;
-    color: gray;
-
 }
