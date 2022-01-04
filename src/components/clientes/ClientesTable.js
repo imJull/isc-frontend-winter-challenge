@@ -17,11 +17,11 @@ export const ClientesTable = ({cliente}) => {
         <TableHead>
           <TableRow>
             <TableCell>Cliente</TableCell>
-            <TableCell align="right">Tipo</TableCell>
-            <TableCell align="right">Identificaión</TableCell>
-            <TableCell align="right">Telefono</TableCell>
-            <TableCell align="right">Horario</TableCell>
-            <TableCell align="right">Estado</TableCell>
+            <TableCell align="left">Tipo</TableCell>
+            <TableCell align="left">Identificaión</TableCell>
+            <TableCell align="left">Telefono</TableCell>
+            <TableCell align="left">Horario</TableCell>
+            <TableCell align="center">Estado</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>

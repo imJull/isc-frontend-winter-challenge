@@ -1,5 +1,8 @@
 import React from 'react'
 import {TableRow, TableCell} from '@mui/material';
+import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord';
+
+import './clientes.css';
 
 
 export const ClientesTableList = ({cliente}) => {
@@ -16,12 +19,15 @@ export const ClientesTableList = ({cliente}) => {
                   >
                     <TableCell component="th" scope="row">{nombre}
                     </TableCell>
-                    <TableCell align="right">{tipo}</TableCell>
-                    <TableCell align="right">{identificacion}</TableCell>
-                    <TableCell align="right">{telefono}</TableCell>
-                    <TableCell align="right">{horario}</TableCell>
-                    <TableCell align="right">
-                        {(estado) ? 'Activo' :'Deshabilitado' }
+                    <TableCell align="left">{tipo}</TableCell>
+                    <TableCell align="left">{identificacion}</TableCell>
+                    <TableCell align="left">{telefono}</TableCell>
+                    <TableCell align="left">{horario}</TableCell>
+                    <TableCell align="center">
+                        {(estado) ? 
+                            <div className='cl-state'><FiberManualRecordIcon sx={{ fontSize: '9px', color:'green'}} /><span >Activo</span></div>
+                            : 
+                            <div className='cl-state'><FiberManualRecordIcon sx={{ fontSize: '9px', color:"red" }} /><span >Deshabilitado</span> </div> }
                         </TableCell>
                   
                   </TableRow>

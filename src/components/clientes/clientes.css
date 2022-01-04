@@ -25,5 +25,16 @@
 .agregarbutton{
     display: flex;
     color: gray;
+}
 
+.cl-state{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.cl-state span{
+    padding-left: 9px;
+    font-style: italic;
 }

@@ -3,13 +3,29 @@
     {
       "id": 1,
       "nombre": "Dexter Rndle",
-      "tipo": "Cliente juridico",
+      "tipo": "Juridico",
       "identificacion": 11459087,
       "telefono": 86403010,
       "horario": "8am-10am",
       "estado": true,
       "cuentas_por_cobrar": [
-        {}
+        {
+          "id": 1,
+          "cliente_identificacion": 1244151,
+          "cliente_nombre": "Dexter Rndle",
+          "numero_factura": 132,
+          "condicion": "Credito",
+          "plazo_vencimiento": "Feb 2022",
+          "total_original": 20000,
+          "saldo_restante": 20000,
+          "abonos": [
+            {
+              "id": 312,
+              "metodo_de_pago": "efectivo",
+              "monto": 1500
+            }
+          ]
+        }
       ]
     },
     {
@@ -21,7 +37,23 @@
       "horario": "10am-11am",
       "estado": true,
       "cuentas_por_cobrar": [
-        {}
+        {
+          "id": 1,
+          "cliente_identificacion": 1244151,
+          "cliente_nombre": "Norlan Rndle",
+          "numero_factura": 133,
+          "condicion": "Credito",
+          "plazo_vencimiento": "Mar 2022",
+          "total_original": 30000,
+          "saldo_restante": 30000,
+          "abonos": [
+            {
+              "id": 312,
+              "metodo_de_pago": "efectivo",
+              "monto": 0
+            }
+          ]
+        }
       ]
     },
     {
@@ -29,75 +61,85 @@
       "nombre": "Dexter",
       "tipo": "Cliente juridico",
       "identificacion": 70544587,
-      "telefono": 50186403010,
+      "telefono": 50186410,
       "horario": "4:40pm-5:15pm",
       "estado": false,
       "cuentas_por_cobrar": [
-        {}
+        {
+          "id": 1,
+          "cliente_identificacion": 1244151,
+          "cliente_nombre": "Dexter",
+          "numero_factura": 132,
+          "condicion": "Credito",
+          "plazo_vencimiento": "May 2022",
+          "total_original": 20000,
+          "saldo_restante": 10000,
+          "abonos": [
+            {
+              "id": 312,
+              "metodo_de_pago": "efectivo",
+              "monto": 2500
+            }
+          ]
+        }
       ]
     },
     {
+      "id": 4,
       "nombre": "Yung Gucci",
       "tipo": "Juridico",
-      "identificacion": "1244151",
+      "identificacion": 1244151,
       "telefono": "806665455",
       "horario": "8am - 8.30am",
       "estado": "Activo",
-      "id": 4
+      "cuentas_por_cobrar": [
+        {
+          "id": 1,
+          "cliente_identificacion": 1244151,
+          "cliente_nombre": "Yung Gucci",
+          "numero_factura": 132,
+          "condicion": "Credito",
+          "plazo_vencimiento": "Ene 2022",
+          "total_original": 20000,
+          "saldo_restante": 20000,
+          "estado": true,
+          "abonos": [
+            {
+              "id": 312,
+              "metodo_de_pago": "efectivo",
+              "monto": 2500
+            }
+          ]
+        }
+      ]
     },
     {
-      "nombre": "Lester",
-      "tipo": "Físico",
-      "identificacion": "125888",
-      "telefono": "95959",
-      "horario": "9509509",
-      "estado": "Activo",
-      "id": 5
-    },
-    {
-      "nombre": "asda",
-      "tipo": "asda",
-      "identificacion": "1213",
-      "telefono": "1313",
-      "horario": "313131",
-      "estado": "Activo",
-      "id": 6
-    },
-    {
-      "nombre": "",
-      "tipo": "",
-      "identificacion": 0,
-      "telefono": 0,
-      "horario": "",
-      "estado": "Activo",
-      "id": 7
-    },
-    {
-      "nombre": "as",
-      "tipo": "asad",
-      "identificacion": "12314",
-      "telefono": "0141414",
-      "horario": "12141414",
-      "estado": "Activo",
-      "id": 8
-    },
-    {
-      "nombre": "Andrey",
-      "tipo": "Cliente Jurídico",
-      "identificacion": "135789932",
-      "telefono": "80644599",
-      "horario": "9am-12:40pm",
-      "estado": "Activo",
-      "id": 9
-    },
-    {
-      "nombre": "Asad",
+      "nombre": "Aaron Lennon",
       "tipo": "Cliente Físico",
-      "identificacion": "01241",
-      "telefono": "0414145",
-      "horario": "123",
-      "estado": "Activo",
-      "id": 10
+      "identificacion": "20488944",
+      "telefono": "97949005",
+      "horario": "5pm-5:40pm",
+      "estado": true,
+      "cuentas_por_cobrar": [
+        {
+          "id": 428,
+          "cliente_identificacion": "20488944",
+          "cliente_nombre": "Aaron Lennon",
+          "numero_factura": 260,
+          "condicion": "Credito",
+          "plazo_vencimiento": "1 mes",
+          "total_original": 5000,
+          "saldo_restante": 0,
+          "abonos": [
+            {
+              "id": 73,
+              "metodo_de_pago": "efectivo",
+              "monto": 1500
+            }
+          ]
+        }
+      ],
+      "id": 5
     }
   ],
   "cuentasPorCobrar": [

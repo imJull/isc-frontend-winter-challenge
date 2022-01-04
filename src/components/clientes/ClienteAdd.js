@@ -23,24 +23,45 @@ export const ClienteAdd = ({open, handleClose}) => {
     const [identificacion, setIdentificacion] = useState(init)
     const [telefono, setTelefono] = useState(init)
     const [horario, setHorario] = useState('')
-    const [estado, setEstado] = useState('Activo')
+    const [estado, setEstado] = useState(false)
     
     
     const handleAdd = (e) => {
             e.preventDefault();
             
             
-            if( nombre === "" || tipo === "" || identificacion === "" || telefono === "" || horario === "" || estado === ""){
+            if( nombre === "" || tipo === "" || identificacion === "" || telefono === "" || horario === ""){
                 alert("Todos los campos son obligatorios. Recuerte rellenar de manera válida todos los espacios")
             }else{
-              postClientes({nombre, tipo, identificacion,telefono,horario, estado})
+              
+              const cuentas_por_cobrar = [
+                {
+                  id: Math.floor(Math.random() * 1000 +1),
+                  cliente_identificacion: identificacion,
+                  cliente_nombre: nombre,
+                  numero_factura: Math.floor(Math.random() * 500 +1),
+                  condicion: "Credito",
+                  plazo_vencimiento: "1 mes",
+                  total_original: 5000,
+                  saldo_restante: 0,
+                  abonos: [
+                    {
+                      id: Math.floor(Math.random() * 100 + 1),
+                      metodo_de_pago: "efectivo",
+                      monto: 1500
+                    }
+                  ]
+                }
+              ]
+              
+              postClientes({nombre, tipo, identificacion,telefono,horario, estado, cuentas_por_cobrar})
               
               setNombre("")
               setTipo("")
               setIdentificacion(init)
               setTelefono(init)
               setHorario("")
-              setEstado("")
+              setEstado(true)
 
               handleClose()
 
@@ -136,8 +157,15 @@ export const ClienteAdd = ({open, handleClose}) => {
             variant="standard"
           />
           <FormGroup align="center">
-           <FormControlLabel control={<Checkbox defaultChecked />} label="¿El usuario se encuentra activo?" />
-           {console.log(Checkbox.propTypes.checked)}
+           <FormControlLabel 
+            control={
+              <Checkbox 
+                value={estado} 
+                onChange={(e) => setEstado(!estado)} />
+                } label="¿El usuario se encuentra activo?" 
+            />
+            {console.log(estado)}
+           
           </FormGroup>
           </Box>
         </DialogContent>
