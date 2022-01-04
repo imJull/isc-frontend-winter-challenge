@@ -1,14 +1,20 @@
-import React from 'react'
+import React, {useState} from 'react'
 import {TableRow, TableCell, Button} from '@mui/material';
 import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord';
-import { orange } from '@mui/material/colors';
-
-const naranja = orange[500];
-
-
+import { CuentasAbonarBTN } from './CuentasAbonarBTN';
 
 export const CuentasTableList = ({clientes}) => {
 
+  const [open, setOpen] = useState(false);
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+  
 
 
     return (
@@ -44,18 +50,24 @@ export const CuentasTableList = ({clientes}) => {
                                 }
                             </TableCell>
                             <TableCell align='center'>
-                              <Button disabled={(cc.saldo_restante <= 0)} variant="contained">Abonar</Button>
+                              <Button  
+                                  disabled={(cc.saldo_restante <= 0)}
+                                  variant="contained"
+                                  onClick={handleClickOpen}>Abonar
+                              </Button>
 
                             </TableCell>
+                            
                             </>
                           ))}
-                          </>
-
-
+                          
+                        </>
                       </TableRow>
+                      
               )
             })
           }
+          <CuentasAbonarBTN open={open} handleClose={handleClose}/>
         </>
     )
 }

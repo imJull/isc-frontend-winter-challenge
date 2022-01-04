@@ -168,6 +168,7 @@ export const ClienteAdd = ({open, handleClose}) => {
            
           </FormGroup>
           </Box>
+          <span style={{fontSize:"10px", fontStyle: "italic", color:"red"}}>*Al agregar un nuevo cliente, automáticamente se recrea una cuenta por cobrar con un saldo de $5000</span>
         </DialogContent>
 
         <DialogActions>
