@@ -1,145 +1,88 @@
 {
   "clientes": [
     {
-      "id": 1,
-      "nombre": "Dexter Rndle",
-      "tipo": "Juridico",
-      "identificacion": 11459087,
-      "telefono": 86403010,
-      "horario": "8am-10am",
-      "estado": true,
-      "cuentas_por_cobrar": [
-        {
-          "id": 1,
-          "cliente_identificacion": 1244151,
-          "cliente_nombre": "Dexter Rndle",
-          "numero_factura": 132,
-          "condicion": "Credito",
-          "plazo_vencimiento": "Feb 2022",
-          "total_original": 20000,
-          "saldo_restante": 20000,
-          "abonos": [
-            {
-              "id": 312,
-              "metodo_de_pago": "efectivo",
-              "monto": 1500
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": 2,
-      "nombre": "Norlan Rndle",
-      "tipo": "Cliente fisico",
-      "identificacion": 11451087,
-      "telefono": 86403010,
-      "horario": "10am-11am",
-      "estado": true,
-      "cuentas_por_cobrar": [
-        {
-          "id": 1,
-          "cliente_identificacion": 1244151,
-          "cliente_nombre": "Norlan Rndle",
-          "numero_factura": 133,
-          "condicion": "Credito",
-          "plazo_vencimiento": "Mar 2022",
-          "total_original": 30000,
-          "saldo_restante": 30000,
-          "abonos": [
-            {
-              "id": 312,
-              "metodo_de_pago": "efectivo",
-              "monto": 0
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": 3,
-      "nombre": "Dexter",
-      "tipo": "Cliente juridico",
-      "identificacion": 70544587,
-      "telefono": 50186410,
-      "horario": "4:40pm-5:15pm",
-      "estado": false,
-      "cuentas_por_cobrar": [
-        {
-          "id": 1,
-          "cliente_identificacion": 1244151,
-          "cliente_nombre": "Dexter",
-          "numero_factura": 132,
-          "condicion": "Credito",
-          "plazo_vencimiento": "May 2022",
-          "total_original": 20000,
-          "saldo_restante": 10000,
-          "abonos": [
-            {
-              "id": 312,
-              "metodo_de_pago": "efectivo",
-              "monto": 2500
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": 4,
-      "nombre": "Yung Gucci",
-      "tipo": "Juridico",
-      "identificacion": 1244151,
-      "telefono": "806665455",
-      "horario": "8am - 8.30am",
-      "estado": "Activo",
-      "cuentas_por_cobrar": [
-        {
-          "id": 1,
-          "cliente_identificacion": 1244151,
-          "cliente_nombre": "Yung Gucci",
-          "numero_factura": 132,
-          "condicion": "Credito",
-          "plazo_vencimiento": "Ene 2022",
-          "total_original": 20000,
-          "saldo_restante": 20000,
-          "estado": true,
-          "abonos": [
-            {
-              "id": 312,
-              "metodo_de_pago": "efectivo",
-              "monto": 2500
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "Aaron Lennon",
+      "nombre": "Yung Alexis",
       "tipo": "Cliente Físico",
-      "identificacion": "20488944",
-      "telefono": "97949005",
-      "horario": "5pm-5:40pm",
+      "identificacion": "1223647",
+      "telefono": "8464318",
+      "horario": "8am-12am",
       "estado": true,
       "cuentas_por_cobrar": [
         {
-          "id": 428,
-          "cliente_identificacion": "20488944",
-          "cliente_nombre": "Aaron Lennon",
-          "numero_factura": 260,
+          "id": 578,
+          "cliente_identificacion": "1223647",
+          "cliente_nombre": "Yung Alexis",
+          "numero_factura": 470,
           "condicion": "Credito",
           "plazo_vencimiento": "1 mes",
           "total_original": 5000,
           "saldo_restante": 0,
           "abonos": [
             {
-              "id": 73,
+              "id": 9,
               "metodo_de_pago": "efectivo",
               "monto": 1500
             }
           ]
         }
       ],
-      "id": 5
+      "id": 1
+    },
+    {
+      "nombre": "Van",
+      "tipo": "Cliente Físico",
+      "identificacion": "1254799",
+      "telefono": "61161",
+      "horario": "Lunes",
+      "estado": false,
+      "cuentas_por_cobrar": [
+        {
+          "id": 741,
+          "cliente_identificacion": "1254799",
+          "cliente_nombre": "Van",
+          "numero_factura": 78,
+          "condicion": "Credito",
+          "plazo_vencimiento": "1 mes",
+          "total_original": 5000,
+          "saldo_restante": 3500,
+          "abonos": [
+            {
+              "id": 7,
+              "metodo_de_pago": "efectivo",
+              "monto": 1500
+            }
+          ]
+        }
+      ],
+      "id": 2
+    },
+    {
+      "nombre": "Dexter",
+      "tipo": "Cliente Físico",
+      "identificacion": "6479845",
+      "telefono": "31488",
+      "horario": "Martes",
+      "estado": true,
+      "cuentas_por_cobrar": [
+        {
+          "id": 257,
+          "cliente_identificacion": "6479845",
+          "cliente_nombre": "Dexter",
+          "numero_factura": 441,
+          "condicion": "Credito",
+          "plazo_vencimiento": "1 mes",
+          "total_original": 5000,
+          "saldo_restante": 3500,
+          "abonos": [
+            {
+              "id": 46,
+              "metodo_de_pago": "efectivo",
+              "monto": 1500
+            }
+          ]
+        }
+      ],
+      "id": 3
     }
   ],
   "cuentasPorCobrar": [

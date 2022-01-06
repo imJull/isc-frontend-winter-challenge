@@ -43,7 +43,7 @@ export const ClienteAdd = ({open, handleClose}) => {
                   condicion: "Credito",
                   plazo_vencimiento: "1 mes",
                   total_original: 5000,
-                  saldo_restante: 0,
+                  saldo_restante: 3500,
                   abonos: [
                     {
                       id: Math.floor(Math.random() * 100 + 1),
@@ -168,7 +168,7 @@ export const ClienteAdd = ({open, handleClose}) => {
            
           </FormGroup>
           </Box>
-          <span style={{fontSize:"10px", fontStyle: "italic", color:"red"}}>*Al agregar un nuevo cliente, automáticamente se recrea una cuenta por cobrar con un saldo de $5000</span>
+          <span style={{fontSize:"10px", fontStyle: "italic", color:"red"}}>*Al agregar un nuevo cliente, automáticamente se crea una cuenta por cobrar con un saldo de ¢5000</span>
         </DialogContent>
 
         <DialogActions>

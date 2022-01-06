@@ -1,6 +1,5 @@
 
 import Table from '@mui/material/Table';
-import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell';
 import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
@@ -26,11 +25,11 @@ export const CuentasTable = ({clientes}) => {
             <TableCell align="center">Estado</TableCell>
           </TableRow>
         </TableHead>
-        <TableBody>
+        
          
             <CuentasTableList clientes={clientes} />
          
-        </TableBody>
+        
       </Table>
     </TableContainer>
    

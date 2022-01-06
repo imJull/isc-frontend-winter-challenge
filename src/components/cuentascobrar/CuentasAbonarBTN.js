@@ -1,5 +1,5 @@
-import * as React from 'react';
-import { useState } from 'react';
+
+import { useState, useEffect } from 'react';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import CreditCardIcon from '@mui/icons-material/CreditCard';
@@ -8,28 +8,43 @@ import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
+import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord';
 import InputLabel from '@mui/material/InputLabel';
 import TextField from '@mui/material/TextField';
 
 
-export const CuentasAbonarBTN = ({open, handleClose}) => {
 
-    const [metodoPago, setMetodoPago] = useState("Efectivo");
+export const CuentasAbonarBTN = ({cli, cc, open, handleClose, handleClickOpen}) => {
+
+    const [metodoPago] = useState("Efectivo");
     const [efectivo, setEfectivo] = useState(300);
+
 
     const handleAbonar = () => {
         console.log("abonado" + efectivo);
+        handleClickOpen(cc.id)
     }
 
     return (
-        <div>
-        <Dialog open={open} onClose={handleClose}>
-        <DialogTitle>Abonar a la factura</DialogTitle>
+        <>
+        
+        <Dialog maxWidth="sm" open={open} onClose={handleClose}>
+        <DialogTitle>Abonar a la factura # {cc.numero_factura}</DialogTitle>
         <DialogContent>
-          <DialogContentText>
-            <span>Detalle de factura</span>
-          </DialogContentText>
-          <Box onSubmit={handleAbonar}>
+          <div className='modal-content'>
+            <h4>Detalle de factura</h4>
+            <div className='modal-content-cli'>
+              <p>Cliente: <span>{cc.cliente_nombre}</span></p>
+              <div className='cl-state'><FiberManualRecordIcon sx={{ fontSize: '9px', color:'orange' }} /><span >Pendiente</span> </div>   
+            </div>
+            <p>Cédula: <span>{cc.cliente_identificacion}</span></p>
+            <p>Emitido: <span>Ene 2021</span></p>
+            <p>Vencimiento: <span>{cc.plazo_vencimiento}</span></p>
+
+          </div>
+
+          
+          <Box >
 
           <TextField
             required
@@ -58,15 +73,17 @@ export const CuentasAbonarBTN = ({open, handleClose}) => {
           </TextField>
         
           </Box>
-          <span style={{fontSize:"10px", fontStyle: "italic", color:"red"}}>*Al agregar un nuevo cliente, automáticamente se recrea una cuenta por cobrar con un saldo de $5000</span>
+          <span style={{fontSize:"10px", fontStyle: "italic", color:"red"}}>*El monto de abono por defecto es de ¢300</span>
         </DialogContent>
 
         <DialogActions>
           <Button variant="contained" color="error" onClick={handleClose}>Cancelar</Button>
-          <Button variant="contained" color="success" style={{backgroundColor:"#13CE66"}} onClick={(handleAbonar)}><CreditCardIcon style={{padding: "2px"}}/>Añadir</Button>
+          <Button variant="contained" color="success" style={{backgroundColor:"#13CE66"}} onClick={handleAbonar}>
+            <CreditCardIcon style={{padding: "2px"}}/>Añadir
+          </Button>
         </DialogActions>
 
       </Dialog>
-        </div>
+        </>
     )
 }

@@ -14,3 +14,36 @@
     justify-content: space-around;
     align-items: center;
 }
+
+.modal-content{
+    width: 20rem;
+    height: 12rem;
+    padding: 0 5px;
+    
+    
+}
+
+.modal-content h4{
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 500;
+}
+
+.modal-content-cli{
+    width: inherit;
+    display: flex;
+    justify-content: space-between;  
+}
+
+.modal-content p{
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.modal-content span {
+    font-size: 12px;
+    font-weight: 400;
+}
+
+
+
