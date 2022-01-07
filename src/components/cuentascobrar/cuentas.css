@@ -15,6 +15,28 @@
     align-items: center;
 }
 
+.cell-cliente{
+    width: 12rem;
+    padding: 0.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    flex-direction: column;       
+}
+
+.cell-cliente span {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    font-size: 13px;
+}
+.cell-cliente span > p{
+    font-style: italic;
+    font-size: 12px;
+    color: gray;
+    margin: 2px;
+}
+
 .modal-content{
     width: 20rem;
     height: 12rem;
@@ -44,6 +66,5 @@
     font-size: 12px;
     font-weight: 400;
 }
-
 
 

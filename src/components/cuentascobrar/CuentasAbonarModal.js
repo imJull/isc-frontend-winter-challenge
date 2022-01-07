@@ -1,12 +1,11 @@
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import CreditCardIcon from '@mui/icons-material/CreditCard';
 import Dialog from '@mui/material/Dialog';
 import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
-import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord';
 import InputLabel from '@mui/material/InputLabel';
@@ -14,15 +13,14 @@ import TextField from '@mui/material/TextField';
 
 
 
-export const CuentasAbonarBTN = ({cli, cc, open, handleClose, handleClickOpen}) => {
+export const CuentasAbonarModal = ({cc, open, handleClose}) => {
 
     const [metodoPago] = useState("Efectivo");
     const [efectivo, setEfectivo] = useState(300);
 
-
     const handleAbonar = () => {
         console.log("abonado" + efectivo);
-        handleClickOpen(cc.id)
+        
     }
 
     return (

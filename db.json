@@ -83,6 +83,34 @@
         }
       ],
       "id": 3
+    },
+    {
+      "nombre": "Gnealz",
+      "tipo": "Cliente Físico",
+      "identificacion": "0094944",
+      "telefono": "56979",
+      "horario": "10am-11am",
+      "estado": false,
+      "cuentas_por_cobrar": [
+        {
+          "id": 468,
+          "cliente_identificacion": "0094944",
+          "cliente_nombre": "Gnealz",
+          "numero_factura": 334,
+          "condicion": "Credito",
+          "plazo_vencimiento": "1 mes",
+          "total_original": 5000,
+          "saldo_restante": 3500,
+          "abonos": [
+            {
+              "id": 15,
+              "metodo_de_pago": "efectivo",
+              "monto": 1500
+            }
+          ]
+        }
+      ],
+      "id": 4
     }
   ],
   "cuentasPorCobrar": [

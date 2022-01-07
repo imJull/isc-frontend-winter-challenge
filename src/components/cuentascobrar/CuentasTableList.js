@@ -1,24 +1,11 @@
-import React, {useState} from 'react'
-import {TableRow, TableCell, Button} from '@mui/material';
+import React from 'react'
+import {TableRow, TableCell} from '@mui/material';
 import TableBody from '@mui/material/TableBody';
 import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord';
-import { CuentasAbonarBTN } from './CuentasAbonarBTN';
+
+import { CuentasOpenBTN } from './CuentasOpenBTN';
 
 export const CuentasTableList = ({clientes}) => {
-
-  const [open, setOpen] = useState(false);
-
-  const handleClickOpen = (id) => {
-    setOpen(true);
-    console.log(id)
-  };
-
-
-  const handleClose = () => {
-    setOpen(false);
-  };
-  
-
 
     return (
         <>
@@ -33,12 +20,17 @@ export const CuentasTableList = ({clientes}) => {
                           
                           {cuentas_por_cobrar.map(cc =>(
                             <TableRow 
+                              onClick={() => console.log(id)}
                               key={cc.id}
                               sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
+                                
                               <TableCell>
-                                <span>{cc.cliente_nombre}</span>
-                                <span>{cc.cliente_identificacion}</span>
-                                <span>{cc.numero_factura}</span></TableCell>
+                                <div className='cell-cliente'>  
+                                  <span><p>{cc.cliente_nombre}</p></span>
+                                  <span>Cédula: <p>{cc.cliente_identificacion}</p></span>
+                                  <span>Número de Factura: <p>{cc.numero_factura}</p></span>
+                                  </div>
+                              </TableCell>  
                               <TableCell align="center">{cc.condicion}</TableCell>
                               <TableCell align="center">{cc.plazo_vencimiento}</TableCell>
                               <TableCell align="center">¢ {cc.total_original}</TableCell>
@@ -54,15 +46,7 @@ export const CuentasTableList = ({clientes}) => {
                               <TableCell key={id} align='center'>
                                 
                                 <div>
-                                  <Button  
-                                      disabled={(cc.saldo_restante <= 0)}
-                                      variant="contained"
-                                      onClick={() => handleClickOpen(id)}>Abonar
-                                      
-                                  </Button>
-
-                                  <CuentasAbonarBTN clientes={clientes} cli={cli} cc={cc} open={open} handleClickOpen={handleClickOpen} handleClose={handleClose}/>
-    
+                                  <CuentasOpenBTN key={id} cc={cc} />        
                                 </div>
 
                               </TableCell>
