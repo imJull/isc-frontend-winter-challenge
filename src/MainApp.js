@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 
 import { getAbonos } from './helpers/getAbonos'
-import { getClientes } from './helpers/getClientes'
+import { getClientes, getClientesIdCC } from './helpers/getClientes'
 import { getCuentasPorCobrar } from './helpers/getCuentasPorCobrar'
 
 import { ClienteContext, AbonosContext, CuentaCobrarContex } from './hooks/context'
@@ -15,7 +15,7 @@ export const MainApp = () => {
     const [clientes, setClientes] = useState([]);
     const [abonos, setAbonos] = useState([]);
     const [Ccobrar, setCcobrar] = useState([]);
-    
+
     useEffect(() => {
         const traerC = async () =>{
             const c = await getClientes();

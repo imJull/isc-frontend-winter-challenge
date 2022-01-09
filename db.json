@@ -111,6 +111,51 @@
         }
       ],
       "id": 4
+    },
+    {
+      "nombre": "MoDahoud",
+      "tipo": "Cliente Físico",
+      "identificacion": "028785",
+      "telefono": "922367",
+      "horario": "1pm - 1:15pm",
+      "estado": true,
+      "cuentas_por_cobrar": [
+        {
+          "id": 817,
+          "cliente_identificacion": "028785",
+          "cliente_nombre": "MoDahoud",
+          "numero_factura": 40,
+          "condicion": "Credito",
+          "plazo_vencimiento": "1 mes",
+          "total_original": 5000,
+          "saldo_restante": 3500,
+          "abonos": [
+            {
+              "id": 41,
+              "metodo_de_pago": "efectivo",
+              "monto": 1500
+            }
+          ]
+        },
+        {
+          "id": 376,
+          "cliente_identificacion": "028785",
+          "cliente_nombre": "MoDahoud",
+          "numero_factura": 318,
+          "condicion": "Credito",
+          "plazo_vencimiento": "2 mes",
+          "total_original": 5000,
+          "saldo_restante": 3500,
+          "abonos": [
+            {
+              "id": 28,
+              "metodo_de_pago": "efectivo",
+              "monto": 1500
+            }
+          ]
+        }
+      ],
+      "id": 5
     }
   ],
   "cuentasPorCobrar": [
@@ -137,6 +182,26 @@
       "id": 1,
       "metodo_de_pago": "efectivo",
       "monto": 15000
+    },
+    {
+      "abono": {
+        "id": 182,
+        "metodo_de_pago": "Efectivo",
+        "monto": 300
+      },
+      "id": 2
+    },
+    {
+      "id": 266,
+      "metodo_de_pago": "Efectivo",
+      "monto": 300
+    },
+    {
+      "id": 320,
+      "nombre": "MoDahoud",
+      "cedula": "028785",
+      "metodo_de_pago": "Efectivo",
+      "monto": "400"
     }
   ]
 }

@@ -10,6 +10,8 @@ import DialogTitle from '@mui/material/DialogTitle';
 import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord';
 import InputLabel from '@mui/material/InputLabel';
 import TextField from '@mui/material/TextField';
+import { postAbonos } from '../../helpers/postAbonos';
+import { postClientes } from '../../helpers/postClientes';
 
 
 
@@ -17,9 +19,19 @@ export const CuentasAbonarModal = ({cc, open, handleClose}) => {
 
     const [metodoPago] = useState("Efectivo");
     const [efectivo, setEfectivo] = useState(300);
+    const { cliente_nombre, cliente_identificacion } = cc
 
     const handleAbonar = () => {
         console.log("abonado" + efectivo);
+        const abono = {
+          id: Math.floor(Math.random()* 500 + 1),
+          nombre: cliente_nombre,
+          cedula: cliente_identificacion,
+          metodo_de_pago: metodoPago,
+          monto: efectivo
+        }
+        postClientes()
+        postAbonos(abono)
         
     }
 

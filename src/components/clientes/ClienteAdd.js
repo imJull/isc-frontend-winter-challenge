@@ -15,7 +15,6 @@ import FormGroup from '@mui/material/FormGroup';
 import Box from '@mui/material/Box';
 import { postClientes } from '../../helpers/postClientes';
 
-
 export const ClienteAdd = ({open, handleClose}) => {
     const init = 0;
     const [nombre, setNombre] = useState('')
@@ -35,24 +34,42 @@ export const ClienteAdd = ({open, handleClose}) => {
             }else{
               
               const cuentas_por_cobrar = [
-                {
-                  id: Math.floor(Math.random() * 1000 +1),
-                  cliente_identificacion: identificacion,
-                  cliente_nombre: nombre,
-                  numero_factura: Math.floor(Math.random() * 500 +1),
-                  condicion: "Credito",
-                  plazo_vencimiento: "1 mes",
-                  total_original: 5000,
-                  saldo_restante: 3500,
-                  abonos: [
-                    {
-                      id: Math.floor(Math.random() * 100 + 1),
-                      metodo_de_pago: "efectivo",
-                      monto: 1500
-                    }
-                  ]
-                }
-              ]
+                  {
+                    id: Math.floor(Math.random() * 1000 +1),
+                    cliente_identificacion: identificacion,
+                    cliente_nombre: nombre,
+                    numero_factura: Math.floor(Math.random() * 500 +1),
+                    condicion: "Credito",
+                    plazo_vencimiento: "1 mes",
+                    total_original: 5000,
+                    saldo_restante: 3500,
+                    abonos: [
+                      {
+                        id: Math.floor(Math.random() * 100 + 1),
+                        metodo_de_pago: "efectivo",
+                        monto: 1500
+                      }
+                    ]
+                  },
+                  {
+                    id: Math.floor(Math.random() * 1000 +1),
+                    cliente_identificacion: identificacion,
+                    cliente_nombre: nombre,
+                    numero_factura: Math.floor(Math.random() * 500 +1),
+                    condicion: "Credito",
+                    plazo_vencimiento: "2 mes",
+                    total_original: 5000,
+                    saldo_restante: 3500,
+                    abonos: [
+                      {
+                        id: Math.floor(Math.random() * 100 + 1),
+                        metodo_de_pago: "efectivo",
+                        monto: 1500
+                      }
+                    ]
+                  }
+                ]
+              
               
               postClientes({nombre, tipo, identificacion,telefono,horario, estado, cuentas_por_cobrar})
               

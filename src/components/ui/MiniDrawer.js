@@ -1,15 +1,15 @@
 import * as React from 'react';
 import { styled } from '@mui/material/styles';
+import { NavLink } from 'react-router-dom'
+import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
 import Box from '@mui/material/Box';
-import MuiDrawer from '@mui/material/Drawer';
-import List from '@mui/material/List';
 import CssBaseline from '@mui/material/CssBaseline';
 import IconButton from '@mui/material/IconButton';
 import KeyboardDoubleArrowLeftIcon from '@mui/icons-material/KeyboardDoubleArrowLeft';
 import KeyboardDoubleArrowRightIcon from '@mui/icons-material/KeyboardDoubleArrowRight';
-import { NavLink } from 'react-router-dom'
+import List from '@mui/material/List';
+import MuiDrawer from '@mui/material/Drawer';
 import PeopleAltOutlinedIcon from '@mui/icons-material/PeopleAltOutlined';
-import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
 
 import Logo from '../../../src/assets/FendiLogo.png';
 import './tab2.css'
@@ -42,7 +42,6 @@ const DrawerHeader = styled('div')(({ theme }) => ({
   alignItems: 'center',
   justifyContent: 'flex-end',
   padding: theme.spacing(0, 1),
-  // necessary for content to be below app bar
   ...theme.mixins.toolbar,
 }));
 
