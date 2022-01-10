@@ -1,207 +1,73 @@
 {
   "clientes": [
     {
+      "id": 1,
       "nombre": "Yung Alexis",
       "tipo": "Cliente Físico",
       "identificacion": "1223647",
       "telefono": "8464318",
       "horario": "8am-12am",
-      "estado": true,
-      "cuentas_por_cobrar": [
-        {
-          "id": 578,
-          "cliente_identificacion": "1223647",
-          "cliente_nombre": "Yung Alexis",
-          "numero_factura": 470,
-          "condicion": "Credito",
-          "plazo_vencimiento": "1 mes",
-          "total_original": 5000,
-          "saldo_restante": 0,
-          "abonos": [
-            {
-              "id": 9,
-              "metodo_de_pago": "efectivo",
-              "monto": 1500
-            }
-          ]
-        }
-      ],
-      "id": 1
+      "estado": true
     },
     {
-      "nombre": "Van",
-      "tipo": "Cliente Físico",
-      "identificacion": "1254799",
-      "telefono": "61161",
-      "horario": "Lunes",
-      "estado": false,
-      "cuentas_por_cobrar": [
-        {
-          "id": 741,
-          "cliente_identificacion": "1254799",
-          "cliente_nombre": "Van",
-          "numero_factura": 78,
-          "condicion": "Credito",
-          "plazo_vencimiento": "1 mes",
-          "total_original": 5000,
-          "saldo_restante": 3500,
-          "abonos": [
-            {
-              "id": 7,
-              "metodo_de_pago": "efectivo",
-              "monto": 1500
-            }
-          ]
-        }
-      ],
-      "id": 2
-    },
-    {
+      "id":2,
       "nombre": "Dexter",
       "tipo": "Cliente Físico",
       "identificacion": "6479845",
       "telefono": "31488",
       "horario": "Martes",
-      "estado": true,
-      "cuentas_por_cobrar": [
-        {
-          "id": 257,
-          "cliente_identificacion": "6479845",
-          "cliente_nombre": "Dexter",
-          "numero_factura": 441,
-          "condicion": "Credito",
-          "plazo_vencimiento": "1 mes",
-          "total_original": 5000,
-          "saldo_restante": 3500,
-          "abonos": [
-            {
-              "id": 46,
-              "metodo_de_pago": "efectivo",
-              "monto": 1500
-            }
-          ]
-        }
-      ],
-      "id": 3
-    },
-    {
-      "nombre": "Gnealz",
-      "tipo": "Cliente Físico",
-      "identificacion": "0094944",
-      "telefono": "56979",
-      "horario": "10am-11am",
-      "estado": false,
-      "cuentas_por_cobrar": [
-        {
-          "id": 468,
-          "cliente_identificacion": "0094944",
-          "cliente_nombre": "Gnealz",
-          "numero_factura": 334,
-          "condicion": "Credito",
-          "plazo_vencimiento": "1 mes",
-          "total_original": 5000,
-          "saldo_restante": 3500,
-          "abonos": [
-            {
-              "id": 15,
-              "metodo_de_pago": "efectivo",
-              "monto": 1500
-            }
-          ]
-        }
-      ],
-      "id": 4
-    },
-    {
-      "nombre": "MoDahoud",
-      "tipo": "Cliente Físico",
-      "identificacion": "028785",
-      "telefono": "922367",
-      "horario": "1pm - 1:15pm",
-      "estado": true,
-      "cuentas_por_cobrar": [
-        {
-          "id": 817,
-          "cliente_identificacion": "028785",
-          "cliente_nombre": "MoDahoud",
-          "numero_factura": 40,
-          "condicion": "Credito",
-          "plazo_vencimiento": "1 mes",
-          "total_original": 5000,
-          "saldo_restante": 3500,
-          "abonos": [
-            {
-              "id": 41,
-              "metodo_de_pago": "efectivo",
-              "monto": 1500
-            }
-          ]
-        },
-        {
-          "id": 376,
-          "cliente_identificacion": "028785",
-          "cliente_nombre": "MoDahoud",
-          "numero_factura": 318,
-          "condicion": "Credito",
-          "plazo_vencimiento": "2 mes",
-          "total_original": 5000,
-          "saldo_restante": 3500,
-          "abonos": [
-            {
-              "id": 28,
-              "metodo_de_pago": "efectivo",
-              "monto": 1500
-            }
-          ]
-        }
-      ],
-      "id": 5
-    }
+      "estado": false
+    }    
   ],
-  "cuentasPorCobrar": [
+
+  "cuentas_por_cobrar": [
     {
-      "id": 1,
-      "cliente_identificacion": "some comment",
-      "cliente_nombre": "some comment",
-      "numero_factura": "some comment",
-      "plazo_vencimiento": "some comment",
-      "total_original": "some comment",
-      "saldo_restante": "some comment",
-      "abonos": [
-        {
-          "id": 1242,
-          "metodo_de_pago": "efectivo",
-          "monto": 21500
-        }
-      ]
+      "id": 578,
+      "clienteId": 1,
+      "cliente_identificacion": "1223647",
+      "cliente_nombre": "Yung Alexis",
+      "numero_factura": 470,
+      "condicion": "Credito",
+      "plazo_vencimiento": "1 mes",
+      "total_original": 5000,
+      "saldo_restante": 0
+    },
+    {
+      "id": 257,
+      "clienteId": 2,
+      "cliente_identificacion": "6479845",
+      "cliente_nombre": "Dexter",
+      "numero_factura": 441,
+      "condicion": "Credito",
+      "plazo_vencimiento": "1 mes",
+      "total_original": 5000,
+      "saldo_restante": 3500
     }
   ],
   "abonos": [
     {
-      "cuenta_por_cobrar_id": 12,
+      "cuentas_por_cobrarId": 578,
       "id": 1,
       "metodo_de_pago": "efectivo",
       "monto": 15000
-    },
+    },      
     {
-      "abono": {
-        "id": 182,
-        "metodo_de_pago": "Efectivo",
-        "monto": 300
-      },
-      "id": 2
-    },
+      "cuentas_por_cobrarId": 257,
+      "id": 2,
+      "metodo_de_pago": "efectivo",
+      "monto": 5000
+    },      
     {
-      "id": 266,
-      "metodo_de_pago": "Efectivo",
-      "monto": 300
-    },
+      "cuentas_por_cobrarId": 578,
+      "id": 3,
+      "metodo_de_pago": "efectivo",
+      "monto": 1000
+    },      
     {
-      "id": 320,
-      "nombre": "MoDahoud",
-      "cedula": "028785",
-      "metodo_de_pago": "Efectivo",
-      "monto": "400"
-    }
+      "cuentas_por_cobrarId": 257,
+      "id": 4,
+      "metodo_de_pago": "efectivo",
+      "monto": 3000
+    }      
   ]
 }
