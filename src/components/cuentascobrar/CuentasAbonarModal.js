@@ -19,18 +19,16 @@ export const CuentasAbonarModal = ({cc, open, handleClose}) => {
 
     const [metodoPago] = useState("Efectivo");
     const [efectivo, setEfectivo] = useState(300);
-    const { cliente_nombre, cliente_identificacion } = cc
+    const {id} = cc
+    
 
     const handleAbonar = () => {
         console.log("abonado" + efectivo);
-        const abono = {
-          id: Math.floor(Math.random()* 500 + 1),
-          nombre: cliente_nombre,
-          cedula: cliente_identificacion,
+        const abono = {          
           metodo_de_pago: metodoPago,
-          monto: efectivo
+          monto: efectivo,
+          cuentas_por_cobrarId: id 
         }
-        postClientes()
         postAbonos(abono)
         
     }
@@ -70,7 +68,7 @@ export const CuentasAbonarModal = ({cc, open, handleClose}) => {
             fullWidth
             variant="standard"
           />
-          <InputLabel>Saldo restante</InputLabel>
+          <InputLabel>Monto a abonar</InputLabel>
           <TextField
             required
             value={efectivo}

@@ -14,6 +14,7 @@ import Select from '@mui/material/Select';
 import FormGroup from '@mui/material/FormGroup';
 import Box from '@mui/material/Box';
 import { postClientes } from '../../helpers/postClientes';
+import { postCuentasCobrar } from '../../helpers/postCuentasCobrar';
 
 export const ClienteAdd = ({open, handleClose}) => {
     const init = 0;
@@ -28,50 +29,25 @@ export const ClienteAdd = ({open, handleClose}) => {
     const handleAdd = (e) => {
             e.preventDefault();
             
-            
-            if( nombre === "" || tipo === "" || identificacion === "" || telefono === "" || horario === ""){
+            const id = Math.floor(Math.random() * 1000 + 1)
+
+            if( id <= 0  || nombre === "" || tipo === "" || identificacion === "" || telefono === "" || horario === ""){
                 alert("Todos los campos son obligatorios. Recuerte rellenar de manera válida todos los espacios")
             }else{
+                  
               
-              const cuentas_por_cobrar = [
-                  {
-                    id: Math.floor(Math.random() * 1000 +1),
-                    cliente_identificacion: identificacion,
-                    cliente_nombre: nombre,
-                    numero_factura: Math.floor(Math.random() * 500 +1),
-                    condicion: "Credito",
-                    plazo_vencimiento: "1 mes",
-                    total_original: 5000,
-                    saldo_restante: 3500,
-                    abonos: [
-                      {
-                        id: Math.floor(Math.random() * 100 + 1),
-                        metodo_de_pago: "efectivo",
-                        monto: 1500
-                      }
-                    ]
-                  },
-                  {
-                    id: Math.floor(Math.random() * 1000 +1),
-                    cliente_identificacion: identificacion,
-                    cliente_nombre: nombre,
-                    numero_factura: Math.floor(Math.random() * 500 +1),
-                    condicion: "Credito",
-                    plazo_vencimiento: "2 mes",
-                    total_original: 5000,
-                    saldo_restante: 3500,
-                    abonos: [
-                      {
-                        id: Math.floor(Math.random() * 100 + 1),
-                        metodo_de_pago: "efectivo",
-                        monto: 1500
-                      }
-                    ]
-                  }
-                ]
-              
-              
-              postClientes({nombre, tipo, identificacion,telefono,horario, estado, cuentas_por_cobrar})
+              postClientes({id, nombre, tipo, identificacion,telefono,horario, estado})
+
+              postCuentasCobrar({
+                clienteId: id,
+                cliente_identificacion: identificacion,
+                cliente_nombre: nombre,
+                numero_factura: Math.floor(Math.random() * 400 + 1),
+                condicion: "Credito",
+                plazo_vencimiento: "2 meses",
+                total_original: 10000,
+                saldo_restante: 0,
+              })
               
               setNombre("")
               setTipo("")
@@ -82,7 +58,9 @@ export const ClienteAdd = ({open, handleClose}) => {
 
               handleClose()
 
-              window.location.reload();
+              setTimeout(() => {
+                window.location.reload();
+              },2000)
               
             }
             

@@ -6,9 +6,10 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import { CuentasTableList } from './CuentasTableList';
+import { CuentasTableList2 } from './CuentasTableList2';
 
 
-export const CuentasTable = ({clientes}) => {
+export const CuentasTable = ({abonos, clientes, cuentasCobrar, }) => {
 
   return (
 
@@ -27,7 +28,8 @@ export const CuentasTable = ({clientes}) => {
         </TableHead>
         
          
-            <CuentasTableList clientes={clientes} />
+            {/* <CuentasTableList abonos={abonos} clientes={clientes} cuentasCobrar={cuentasCobrar} /> */}
+            <CuentasTableList2 abonos={abonos} clientes={clientes} cuentasCobrar={cuentasCobrar}/>
          
         
       </Table>

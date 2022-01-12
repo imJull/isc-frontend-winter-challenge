@@ -10,20 +10,46 @@
       "estado": true
     },
     {
-      "id":2,
+      "id": 2,
       "nombre": "Dexter",
       "tipo": "Cliente Físico",
       "identificacion": "6479845",
       "telefono": "31488",
       "horario": "Martes",
       "estado": false
-    }    
+    },
+    {
+      "id": 474,
+      "nombre": "Olise",
+      "tipo": "Cliente Físico",
+      "identificacion": "141414",
+      "telefono": "3636363",
+      "horario": "36211",
+      "estado": true
+    },
+    {
+      "id": 218,
+      "nombre": "DeAndre",
+      "tipo": "Cliente Físico",
+      "identificacion": "6584",
+      "telefono": "69464",
+      "horario": "2pm-3pm",
+      "estado": true
+    },
+    {
+      "id": 310,
+      "nombre": "Wilfried",
+      "tipo": "Cliente Físico",
+      "identificacion": "034455",
+      "telefono": "0797347",
+      "horario": "12md-1pm",
+      "estado": false
+    }
   ],
-
   "cuentas_por_cobrar": [
     {
       "id": 578,
-      "clienteId": 1,
+      "clientesId": 1,
       "cliente_identificacion": "1223647",
       "cliente_nombre": "Yung Alexis",
       "numero_factura": 470,
@@ -33,8 +59,19 @@
       "saldo_restante": 0
     },
     {
+      "id": 378,
+      "clientesId": 1,
+      "cliente_identificacion": "1223647",
+      "cliente_nombre": "Yung Alexis",
+      "numero_factura": 171,
+      "condicion": "Credito",
+      "plazo_vencimiento": "2 meses",
+      "total_original": 5000,
+      "saldo_restante": 500
+    },
+    {
       "id": 257,
-      "clienteId": 2,
+      "clientesId": 2,
       "cliente_identificacion": "6479845",
       "cliente_nombre": "Dexter",
       "numero_factura": 441,
@@ -42,6 +79,83 @@
       "plazo_vencimiento": "1 mes",
       "total_original": 5000,
       "saldo_restante": 3500
+    },
+    {
+      "id": 258,
+      "clientesId": 2,
+      "cliente_identificacion": "6479845",
+      "cliente_nombre": "Dexter",
+      "numero_factura": 502,
+      "condicion": "Credito",
+      "plazo_vencimiento": "1 mes",
+      "total_original": 5000,
+      "saldo_restante": 2000
+    },
+    {
+      "clienteId": 474,
+      "cliente_identificacion": "141414",
+      "cliente_nombre": "Olise",
+      "numero_factura": 279,
+      "condicion": "Credito",
+      "plazo_vencimiento": "2 meses",
+      "total_original": 5000,
+      "saldo_restante": 3500,
+      "id": 579
+    },
+    {
+      "clienteId": 474,
+      "cliente_identificacion": "141414",
+      "cliente_nombre": "Olise",
+      "numero_factura": 280,
+      "condicion": "Credito",
+      "plazo_vencimiento": "1 meses",
+      "total_original": 5000,
+      "saldo_restante": 1500,
+      "id": 567
+    },
+    {
+      "clienteId": 218,
+      "cliente_identificacion": "6584",
+      "cliente_nombre": "DeAndre",
+      "numero_factura": 380,
+      "condicion": "Credito",
+      "plazo_vencimiento": "2 meses",
+      "total_original": 5000,
+      "saldo_restante": 3500,
+      "id": 580
+    },
+    {
+      "clienteId": 218,
+      "cliente_identificacion": "6584",
+      "cliente_nombre": "DeAndre",
+      "numero_factura": 384,
+      "condicion": "Credito",
+      "plazo_vencimiento": "3 meses",
+      "total_original": 15000,
+      "saldo_restante": 11500,
+      "id": 585
+    },
+    {
+      "clienteId": 310,
+      "cliente_identificacion": "034455",
+      "cliente_nombre": "Wilfried",
+      "numero_factura": 310,
+      "condicion": "Credito",
+      "plazo_vencimiento": "2 meses",
+      "total_original": 10000,
+      "saldo_restante": 0,
+      "id": 581
+    },
+    {
+      "clienteId": 310,
+      "cliente_identificacion": "034455",
+      "cliente_nombre": "Wilfried",
+      "numero_factura": 311,
+      "condicion": "Credito",
+      "plazo_vencimiento": "5 meses",
+      "total_original": 10000,
+      "saldo_restante": 1000,
+      "id": 171
     }
   ],
   "abonos": [
@@ -50,24 +164,36 @@
       "id": 1,
       "metodo_de_pago": "efectivo",
       "monto": 15000
-    },      
+    },
     {
       "cuentas_por_cobrarId": 257,
       "id": 2,
       "metodo_de_pago": "efectivo",
       "monto": 5000
-    },      
+    },
     {
       "cuentas_por_cobrarId": 578,
       "id": 3,
       "metodo_de_pago": "efectivo",
       "monto": 1000
-    },      
+    },
     {
-      "cuentas_por_cobrarId": 257,
+      "cuentas_por_cobrarId": 578,
       "id": 4,
       "metodo_de_pago": "efectivo",
       "monto": 3000
-    }      
+    },
+    {
+      "cuentas_por_cobrarId": 579,
+      "metodo_de_pago": "Efectivo",
+      "monto": 3009,
+      "id": 5
+    },
+    {
+      "metodo_de_pago": "Efectivo",
+      "monto": "1000",
+      "cuentas_por_cobrarId": 171,
+      "id": 6
+    }
   ]
 }
