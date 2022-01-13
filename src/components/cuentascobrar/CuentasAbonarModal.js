@@ -86,7 +86,7 @@ export const CuentasAbonarModal = ({cc, open, handleClose}) => {
 
         <DialogActions>
           <Button variant="contained" color="error" onClick={handleClose}>Cancelar</Button>
-          <Button variant="contained" color="success" style={{backgroundColor:"#13CE66"}} onClick={handleAbonar}>
+          <Button variant="contained" color="success" style={{backgroundColor:"#13CE66"}} onClick={() => {handleAbonar();handleClose()}}>
             <CreditCardIcon style={{padding: "2px"}}/>Añadir
           </Button>
         </DialogActions>

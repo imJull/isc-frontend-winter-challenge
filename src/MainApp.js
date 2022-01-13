@@ -42,9 +42,9 @@ export const MainApp = () => {
     },[])
     
     return (
-        <ClienteContext.Provider value={clientes}>
-            <AbonosContext.Provider value={abonos}>
-               <CuentaCobrarContex.Provider value={Ccobrar}>
+        <ClienteContext.Provider value={[clientes, setClientes]}>
+            <AbonosContext.Provider value={[abonos,setAbonos]}>
+               <CuentaCobrarContex.Provider value={[Ccobrar, setCcobrar]}>
                     <AppRouter />
                 </CuentaCobrarContex.Provider> 
             </AbonosContext.Provider>

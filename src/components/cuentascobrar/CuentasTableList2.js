@@ -9,14 +9,10 @@ import { Abonos } from './Abonos';
 
 export const CuentasTableList2 = ({ abonos, cuentasCobrar }) => {
 
-    const [abono,setAbono] = useState(abonos);
-    const [cuentaCobrar, setCuentaCobrar] = useState(cuentasCobrar);
-
-
     return (
         <>
           {
-            cuentaCobrar.map(cc => {
+            cuentasCobrar.map(cc => {
               return(
                 <TableBody key={cc.id}>
                   

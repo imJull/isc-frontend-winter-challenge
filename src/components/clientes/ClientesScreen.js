@@ -9,19 +9,19 @@ import { ClientesTopBar } from './ClientesTopBar';
 
 export const ClientesScreen = () => {
 
-    const cliente = useContext(ClienteContext);
-    const addbutton = useContext(AddButtonContext);
+    const [cliente,setCliente] = useContext(ClienteContext);
+    
 
     return (
 
         <div className='clientes-container'>
             <div className='table-container'>
-                <AddButtonContext.Provider value={addbutton}>
+                
                     <ClientesTopBar />
                     <ClientesSrchAddBar/>
                     <ClientesTable cliente={cliente} />
                     <p>Total de Clientes: {cliente.length}</p>
-                </AddButtonContext.Provider>
+                
             </div>
         </div>
 

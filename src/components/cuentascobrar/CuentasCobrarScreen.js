@@ -10,16 +10,16 @@ export const CuentasCobrarScreen = () => {
     
     const abonos =  useContext(AbonosContext);
     const clientes = useContext(ClienteContext);
-    const cuentasCobrar = useContext(CuentaCobrarContex);
+    const [cuentasCobrar, setCuentasCobrar] = useContext(CuentaCobrarContex);
 
 
     return (
         <div className='table-container'>
             <div className='clientes-container'>
                 <CuentasTopBar />
-                <CuentasSrchAddBar />
+                <CuentasSrchAddBar cuentasCobrar={cuentasCobrar}/>
                 <CuentasTable abonos={abonos} clientes={clientes} cuentasCobrar={cuentasCobrar}/>
-                <pre>{JSON.stringify(clientes, null, 3)}</pre>
+                <pre>{JSON.stringify(abonos, null, 3)}</pre>
 
                 
             </div>

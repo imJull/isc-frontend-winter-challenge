@@ -45,7 +45,9 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   },
 }));
 
-export const CuentasSrchAddBar = () => {
+export const CuentasSrchAddBar = (cuentasCobrar) => {
+
+  const [search, setSearch]= React.useState('');
 
   return (
     <Box sx={{ flexGrow: 1, margin:'1rem 0rem'}}>
@@ -56,7 +58,10 @@ export const CuentasSrchAddBar = () => {
               <SearchIcon color='primary' />
             </SearchIconWrapper>
             <StyledInputBase
+              onChange={(e) => {setSearch(e.target.value)}}
               placeholder="Search…"
+              type="text"
+              value={search}
               inputProps={{ 'aria-label': 'search' }}
             />
           </Search> 

@@ -44,6 +44,15 @@
       "telefono": "0797347",
       "horario": "12md-1pm",
       "estado": false
+    },
+    {
+      "id": 491,
+      "nombre": "Ronie",
+      "tipo": "Cliente Físico",
+      "identificacion": "1290379",
+      "telefono": "50021477",
+      "horario": "3pm-3:30pm",
+      "estado": true
     }
   ],
   "cuentas_por_cobrar": [
@@ -156,6 +165,17 @@
       "total_original": 10000,
       "saldo_restante": 1000,
       "id": 171
+    },
+    {
+      "clienteId": 491,
+      "cliente_identificacion": "1290379",
+      "cliente_nombre": "Ronie",
+      "numero_factura": 277,
+      "condicion": "Credito",
+      "plazo_vencimiento": "2 meses",
+      "total_original": 10000,
+      "saldo_restante": 0,
+      "id": 586
     }
   ],
   "abonos": [
@@ -194,6 +214,42 @@
       "monto": "1000",
       "cuentas_por_cobrarId": 171,
       "id": 6
+    },
+    {
+      "metodo_de_pago": "Efectivo",
+      "monto": 300,
+      "cuentas_por_cobrarId": 578,
+      "id": 7
+    },
+    {
+      "metodo_de_pago": "Efectivo",
+      "monto": "500",
+      "cuentas_por_cobrarId": 578,
+      "id": 8
+    },
+    {
+      "metodo_de_pago": "Efectivo",
+      "monto": "2000",
+      "cuentas_por_cobrarId": 585,
+      "id": 9
+    },
+    {
+      "metodo_de_pago": "Efectivo",
+      "monto": 300,
+      "cuentas_por_cobrarId": 581,
+      "id": 10
+    },
+    {
+      "metodo_de_pago": "Efectivo",
+      "monto": "1000",
+      "cuentas_por_cobrarId": 578,
+      "id": 11
+    },
+    {
+      "metodo_de_pago": "Efectivo",
+      "monto": "1000",
+      "cuentas_por_cobrarId": 579,
+      "id": 12
     }
   ]
 }
