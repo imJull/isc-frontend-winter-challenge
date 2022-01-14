@@ -18,7 +18,7 @@ export const CuentasCobrarScreen = () => {
             <div className='clientes-container'>
                 <CuentasTopBar />
                 <CuentasSrchAddBar cuentasCobrar={cuentasCobrar}/>
-                <CuentasTable abonos={abonos} clientes={clientes} cuentasCobrar={cuentasCobrar}/>
+                <CuentasTable clientes={clientes} cuentasCobrar={cuentasCobrar}/>
                 <pre>{JSON.stringify(abonos, null, 3)}</pre>
 
                 

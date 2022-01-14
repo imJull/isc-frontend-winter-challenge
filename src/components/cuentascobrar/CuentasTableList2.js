@@ -7,7 +7,7 @@ import { CuentasOpenBTN } from './CuentasOpenBTN';
 import { Abonos } from './Abonos';
 
 
-export const CuentasTableList2 = ({ abonos, cuentasCobrar }) => {
+export const CuentasTableList2 = ({ cuentasCobrar }) => {
 
     return (
         <>
@@ -33,7 +33,7 @@ export const CuentasTableList2 = ({ abonos, cuentasCobrar }) => {
                           <TableCell align="center">¢ {cc.total_original}</TableCell>
                           <TableCell key={cc.numero_factura} align="center">¢ 
 
-                             <Abonos key={cc.numero_factura} abonos={abonos} cc={cc} />
+                             <Abonos key={cc.numero_factura} cc={cc} />
                              
                           </TableCell>
                           <TableCell align="center">¢ {cc.saldo_restante = cc.total_original }</TableCell>

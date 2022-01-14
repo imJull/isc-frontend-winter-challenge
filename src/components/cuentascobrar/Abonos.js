@@ -1,16 +1,24 @@
 import React, { useState, useEffect } from 'react'
+import { getAbonosId } from '../../helpers/getAbonos'
 
-export const Abonos = ({abonos, cc}) => {
-        
+
+export const Abonos = ({cc}) => {
+    const [abonos, setAbonos] = useState([])
+    const [abono, setAbono] = useState([])
+
+    useEffect(() => {
+        const fetchAbonosId = async (id) => {
+            const abns = await getAbonosId(id)
+            setAbonos(abns)
+        }
+        fetchAbonosId(cc.id)
+    },[])
   
     return (
         <>
-            {
-                abonos.map(abn => {
-                    console.log(abn.cuentas_por_cobrarId)
-                })
-                
-            }
+           {
+               abonos.map((abn) => abn.monto )
+           } 
         </>
     )
 }
