@@ -26,10 +26,13 @@ export const CuentasAbonarModal = ({cc, open, handleClose}) => {
         console.log("abonado" + efectivo);
         const abono = {          
           metodo_de_pago: metodoPago,
-          monto: efectivo,
+          monto: Number(efectivo),
           cuentas_por_cobrarId: id 
         }
         postAbonos(abono)
+        setTimeout(() => {
+          window.location.reload()
+        },2000)
         
     }
 

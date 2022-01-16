@@ -9,6 +9,7 @@ import { Abonos } from './Abonos';
 
 export const CuentasTableList2 = ({ cuentasCobrar }) => {
 
+
     return (
         <>
           {
@@ -30,13 +31,13 @@ export const CuentasTableList2 = ({ cuentasCobrar }) => {
                           </TableCell>  
                           <TableCell align="center">{cc.condicion}</TableCell>
                           <TableCell align="center">{cc.plazo_vencimiento}</TableCell>
-                          <TableCell align="center">¢ {cc.total_original}</TableCell>
+                          <TableCell align="center">¢{cc.total_original}</TableCell>
                           <TableCell key={cc.numero_factura} align="center">¢ 
 
                              <Abonos key={cc.numero_factura} cc={cc} />
                              
                           </TableCell>
-                          <TableCell align="center">¢ {cc.saldo_restante = cc.total_original }</TableCell>
+                          <TableCell align="center">¢{cc.total_original - 0 } </TableCell>
                           <TableCell align="right">
                               {(cc.saldo_restante <= 0) ? 
                                   <div className='cl-state'><FiberManualRecordIcon sx={{ fontSize: '9px', color:'green'}} /><span >Pagado</span></div>

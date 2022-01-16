@@ -211,7 +211,7 @@
     },
     {
       "metodo_de_pago": "Efectivo",
-      "monto": "1000",
+      "monto": 1000,
       "cuentas_por_cobrarId": 171,
       "id": 6
     },
@@ -223,13 +223,13 @@
     },
     {
       "metodo_de_pago": "Efectivo",
-      "monto": "500",
+      "monto": 500,
       "cuentas_por_cobrarId": 578,
       "id": 8
     },
     {
       "metodo_de_pago": "Efectivo",
-      "monto": "2000",
+      "monto": 2000,
       "cuentas_por_cobrarId": 585,
       "id": 9
     },
@@ -241,15 +241,57 @@
     },
     {
       "metodo_de_pago": "Efectivo",
-      "monto": "1000",
+      "monto": 1000,
       "cuentas_por_cobrarId": 578,
       "id": 11
     },
     {
       "metodo_de_pago": "Efectivo",
-      "monto": "1000",
+      "monto": 1000,
       "cuentas_por_cobrarId": 579,
       "id": 12
+    },
+    {
+      "metodo_de_pago": "Efectivo",
+      "monto": 300,
+      "cuentas_por_cobrarId": 378,
+      "id": 13
+    },
+    {
+      "metodo_de_pago": "Efectivo",
+      "monto": 100,
+      "cuentas_por_cobrarId": 171,
+      "id": 14
+    },
+    {
+      "metodo_de_pago": "Efectivo",
+      "monto": 50,
+      "cuentas_por_cobrarId": 171,
+      "id": 15
+    },
+    {
+      "metodo_de_pago": "Efectivo",
+      "monto": 150,
+      "cuentas_por_cobrarId": 171,
+      "id": 16
+    },
+    {
+      "metodo_de_pago": "Efectivo",
+      "monto": 300,
+      "cuentas_por_cobrarId": 378,
+      "id": 17
+    },
+    {
+      "metodo_de_pago": "Efectivo",
+      "monto": 1000,
+      "cuentas_por_cobrarId": 258,
+      "id": 18
+    },
+    {
+      "metodo_de_pago": "Efectivo",
+      "monto": 300,
+      "cuentas_por_cobrarId": 258,
+      "id": 19
     }
   ]
 }
