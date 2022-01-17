@@ -8,7 +8,7 @@ import './cuentas.css'
 
 export const CuentasCobrarScreen = () => {
     
-    const abonos =  useContext(AbonosContext);
+    const [abonos, setAbonos] =  useContext(AbonosContext);
     const clientes = useContext(ClienteContext);
     const [cuentasCobrar, setCuentasCobrar] = useContext(CuentaCobrarContex);
 
@@ -18,7 +18,7 @@ export const CuentasCobrarScreen = () => {
             <div className='clientes-container'>
                 <CuentasTopBar />
                 <CuentasSrchAddBar cuentasCobrar={cuentasCobrar}/>
-                <CuentasTable clientes={clientes} cuentasCobrar={cuentasCobrar}/>
+                <CuentasTable abonos={abonos} clientes={clientes} cuentasCobrar={cuentasCobrar}/>
                 <pre>{JSON.stringify(abonos, null, 3)}</pre>
 
                 

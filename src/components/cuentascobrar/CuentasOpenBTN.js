@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import {Button} from '@mui/material';
 import { CuentasAbonarModal } from "./CuentasAbonarModal";
 
-export const CuentasOpenBTN = ({cc}) => {
+export const CuentasOpenBTN = ({cc, saldoRestante}) => {
   const [open, setOpen] = useState(false);
 
   const handleClickOpen = (id) => {
@@ -19,7 +19,7 @@ export const CuentasOpenBTN = ({cc}) => {
   return (
     <>
       <Button
-        disabled={cc.saldo_restante <= 0}
+        disabled={saldoRestante <= 0}
         variant="contained"
         onClick={() => handleClickOpen(cc.id) }
       >
