@@ -12,7 +12,6 @@ export const AppRouter = () => {
       <div className="general-container">
         
         <div className="item1">
-          {/* <VerticalTab /> */}
           <MiniDrawer />
         </div>
         

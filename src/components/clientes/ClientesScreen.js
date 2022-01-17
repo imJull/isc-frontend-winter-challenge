@@ -9,7 +9,7 @@ import { ClientesTopBar } from './ClientesTopBar';
 
 export const ClientesScreen = () => {
 
-    const [cliente,setCliente] = useContext(ClienteContext);
+    const [cliente] = useContext(ClienteContext);
     
 
     return (
