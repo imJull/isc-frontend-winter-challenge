@@ -20,7 +20,7 @@ export const CuentasAbonarModal = ({cc, open, handleClose}) => {
     const [metodoPago] = useState("Efectivo");
     const [efectivo, setEfectivo] = useState(300);
     const {id} = cc
-    
+  
 
     const handleAbonar = () => {
         console.log("abonado" + efectivo);
@@ -29,10 +29,10 @@ export const CuentasAbonarModal = ({cc, open, handleClose}) => {
           monto: Number(efectivo),
           cuentas_por_cobrarId: id 
         }
-        postAbonos(abono)
+
         setTimeout(() => {
           window.location.reload()
-        },2000)
+        },1000)
         
     }
 

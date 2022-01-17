@@ -1,7 +1,9 @@
-import React, { useState } from 'react'
+import React, { useState,useEffect } from 'react'
 import {TableRow, TableCell} from '@mui/material';
 import TableBody from '@mui/material/TableBody';
 import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord';
+
+import { getAbonosId, getAbonos } from '../../helpers/getAbonos'
 
 import { CuentasOpenBTN } from './CuentasOpenBTN';
 import { Abonos } from './Abonos';
@@ -9,11 +11,11 @@ import { Abonos } from './Abonos';
 
 export const CuentasTableList2 = ({ cuentasCobrar }) => {
 
-
     return (
         <>
           {
             cuentasCobrar.map(cc => {
+
               return(
                 <TableBody key={cc.id}>
                   
@@ -35,9 +37,9 @@ export const CuentasTableList2 = ({ cuentasCobrar }) => {
                           <TableCell key={cc.numero_factura} align="center">¢ 
 
                              <Abonos key={cc.numero_factura} cc={cc} />
-                             
+
                           </TableCell>
-                          <TableCell align="center">¢{cc.total_original - 0 } </TableCell>
+                          <TableCell align="center">¢{ } </TableCell>
                           <TableCell align="right">
                               {(cc.saldo_restante <= 0) ? 
                                   <div className='cl-state'><FiberManualRecordIcon sx={{ fontSize: '9px', color:'green'}} /><span >Pagado</span></div>

@@ -17,7 +17,7 @@ export const CuentasTable = ({abonos, clientes, cuentasCobrar, }) => {
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
         <TableHead>
           <TableRow>
-            <TableCell>Cliente</TableCell>
+            <TableCell>Clientes (Cuentas totales: {cuentasCobrar.length})</TableCell>
             <TableCell align="center">Condición</TableCell>
             <TableCell align="center">Plazo de Vencimiento</TableCell>
             <TableCell align="center">Total Original</TableCell>

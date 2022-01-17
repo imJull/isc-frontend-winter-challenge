@@ -53,6 +53,15 @@
       "telefono": "50021477",
       "horario": "3pm-3:30pm",
       "estado": true
+    },
+    {
+      "id": 280,
+      "nombre": "Marcelo",
+      "tipo": "Cliente Jurídico",
+      "identificacion": "1153000",
+      "telefono": "84566441",
+      "horario": "7am - 8am",
+      "estado": false
     }
   ],
   "cuentas_por_cobrar": [
@@ -176,6 +185,39 @@
       "total_original": 10000,
       "saldo_restante": 0,
       "id": 586
+    },
+    {
+      "clienteId": 491,
+      "cliente_identificacion": "1290379",
+      "cliente_nombre": "Ronie",
+      "numero_factura": 227,
+      "condicion": "Credito",
+      "plazo_vencimiento": "1 mes",
+      "total_original": 5000,
+      "saldo_restante": 0,
+      "id": 587
+    },
+    {
+      "clienteId": 280,
+      "cliente_identificacion": "1153000",
+      "cliente_nombre": "Marcelo",
+      "numero_factura": 398,
+      "condicion": "Credito",
+      "plazo_vencimiento": "2 meses",
+      "total_original": 10000,
+      "saldo_restante": 0,
+      "id": 588
+    },
+    {
+      "clienteId": 280,
+      "cliente_identificacion": "1153000",
+      "cliente_nombre": "Marcelo",
+      "numero_factura": 398,
+      "condicion": "Credito",
+      "plazo_vencimiento": "3 meses",
+      "total_original": 10000,
+      "saldo_restante": 6000,
+      "id": 589
     }
   ],
   "abonos": [

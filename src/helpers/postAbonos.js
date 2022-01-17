@@ -14,5 +14,19 @@ export const postAbonos = async (abonos) => {
     const data = await res.json()
     console.log(data)
     
+}
+export const postAbonosTotales = async (abntotales) => {
 
+    const url = `http://localhost:5000/abonosTotales`;
+    const res = await fetch(url, {
+        method: 'POST',
+        headers: {
+          'Content-type' : 'application/json'
+        },
+        body: JSON.stringify(abntotales),
+    });
+    
+    const data = await res.json()
+    console.log(data)
+    
 }
