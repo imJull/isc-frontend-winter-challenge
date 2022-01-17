@@ -334,6 +334,24 @@
       "monto": 300,
       "cuentas_por_cobrarId": 258,
       "id": 19
+    },
+    {
+      "metodo_de_pago": "Efectivo",
+      "monto": 1300,
+      "cuentas_por_cobrarId": 589,
+      "id": 20
+    },
+    {
+      "metodo_de_pago": "Efectivo",
+      "monto": 300,
+      "cuentas_por_cobrarId": 589,
+      "id": 21
+    },
+    {
+      "metodo_de_pago": "Efectivo",
+      "monto": 8400,
+      "cuentas_por_cobrarId": 589,
+      "id": 22
     }
   ]
 }

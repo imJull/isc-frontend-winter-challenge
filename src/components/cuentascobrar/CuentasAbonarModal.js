@@ -29,7 +29,7 @@ export const CuentasAbonarModal = ({cc, open, handleClose}) => {
           monto: Number(efectivo),
           cuentas_por_cobrarId: id 
         }
-
+        postAbonos(abono)
         setTimeout(() => {
           window.location.reload()
         },1000)
