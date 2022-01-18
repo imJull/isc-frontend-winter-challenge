@@ -1,0 +1,22 @@
+Descripción rápida.
+
+Para usar el programa e instalar las dependencias usar: npm install
+Para correr el servidor: npm run server
+
+El programa posee dos páginas, una de clientes y otra de cuentas por cobrar
+
+Clientes
+Algunas funcionalidades
+- Esta página posee la funcionalidad de crear un nuevo cliente que será agregado a la base de 
+datos y añadirá una nueva cuenta por cobrar al usuario antes mencionado
+- Se pueden ver los usuarios registrados y sus características.
+- Se puede ver el número de usuarios registrados en la parte inferior de la tabla (Total Clientes)
+
+Cuentas Por Cobrar
+Algunas funcionalidades
+- Se pueden ver la cantidad de cuentas por cobrar registradas en el encabezado clientes.
+- Se puede realizar un abono a un cliente y factura específicos.
+- Dependiendo de la cantidad abonada se bloquea el boton para añadir abono.
+- El abonador tiene una confirmación del monto a abonar, para decidir si cancelarlo o no.
+
+:)
