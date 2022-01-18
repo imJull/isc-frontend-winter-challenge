@@ -25,7 +25,7 @@ export const CuentasOpenBTN = ({cc, saldoRestante}) => {
         Abonar
       </Button>
 
-         <CuentasAbonarModal open={open} handleClose={handleClose} cc={cc}/>
+         <CuentasAbonarModal open={open} handleClose={handleClose} cc={cc} saldoRestante={saldoRestante}/>
       
     </>
   );

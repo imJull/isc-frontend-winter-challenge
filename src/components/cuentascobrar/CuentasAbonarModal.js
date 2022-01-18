@@ -16,7 +16,7 @@ import { postAbonos } from '../../helpers/postAbonos';
 
 
 
-export const CuentasAbonarModal = ({ cc, open, handleClose }) => {
+export const CuentasAbonarModal = ({ cc, open, handleClose, saldoRestante }) => {
 
     const [metodoPago] = useState("Efectivo");
     const [efectivo, setEfectivo] = useState(300);
@@ -55,6 +55,7 @@ export const CuentasAbonarModal = ({ cc, open, handleClose }) => {
             <p>Cédula: <span>{cc.cliente_identificacion}</span></p>
             <p>Emitido: <span>Ene 2021</span></p>
             <p>Vencimiento: <span>{cc.plazo_vencimiento}</span></p>
+            <p>Saldo restante: <span style={{color :"red", fontSize:"16px", fontWeight:"600"}}>¢{saldoRestante}</span></p>
 
           </div>
 
