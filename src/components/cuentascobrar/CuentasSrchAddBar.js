@@ -2,9 +2,9 @@ import * as React from 'react';
 import { styled } from '@mui/material/styles';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
+import InputBase from '@mui/material/InputBase';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-import InputBase from '@mui/material/InputBase';
 import SearchIcon from '@mui/icons-material/Search';
 
 
@@ -47,8 +47,6 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 
 export const CuentasSrchAddBar = (cuentasCobrar) => {
 
-  const [search, setSearch]= React.useState('');
-
   return (
     <Box sx={{ flexGrow: 1, margin:'1rem 0rem'}}>
       <AppBar color="inherit" position="static">
@@ -58,10 +56,8 @@ export const CuentasSrchAddBar = (cuentasCobrar) => {
               <SearchIcon color='primary' />
             </SearchIconWrapper>
             <StyledInputBase
-              onChange={(e) => {setSearch(e.target.value)}}
               placeholder="Search…"
               type="text"
-              value={search}
               inputProps={{ 'aria-label': 'search' }}
             />
           </Search> 

@@ -1,11 +1,10 @@
 import React, { useContext } from 'react'
-import { ClienteContext, AddButtonContext } from '../../hooks/context'
+import { ClienteContext } from '../../hooks/context'
+import { ClientesTopBar } from './ClientesTopBar';
+import { ClientesSrchAddBar } from './ClientesSrchAddBar';
 import { ClientesTable } from './ClientesTable';
 
 import './clientes.css'
-import { ClientesSrchAddBar } from './ClientesSrchAddBar';
-import { ClientesTopBar } from './ClientesTopBar';
-
 
 export const ClientesScreen = () => {
 

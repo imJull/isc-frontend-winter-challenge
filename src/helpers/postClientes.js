@@ -1,9 +1,7 @@
 
 
 export const postClientes = async (addedClient) => {
-
-
-
+  try{
     const url = 'http://localhost:5000/clientes';
     const res = await fetch(url, {
         method: 'POST',
@@ -14,7 +12,10 @@ export const postClientes = async (addedClient) => {
     });
     
     const data = await res.json()
-    console.log(data)
-    
+    return data
+
+  }catch(error){
+    console.log(error)
+  }
 
 }

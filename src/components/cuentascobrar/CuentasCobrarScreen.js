@@ -1,16 +1,15 @@
-import React, { useContext} from 'react'
-import { CuentaCobrarContex, ClienteContext, AbonosContext } from '../../hooks/context'
-import { CuentasSrchAddBar } from './CuentasSrchAddBar';
+import React, { useContext } from 'react'
+import { CuentaCobrarContex, AbonosContext } from '../../hooks/context'
 import { CuentasTopBar } from './CuentasTopBar';
+import { CuentasSrchAddBar } from './CuentasSrchAddBar';
 import { CuentasTable } from './CuentasTable';
 
 import './cuentas.css'
 
 export const CuentasCobrarScreen = () => {
-    
-    const [abonos, setAbonos] =  useContext(AbonosContext);
-    const clientes = useContext(ClienteContext);
-    const [cuentasCobrar, setCuentasCobrar] = useContext(CuentaCobrarContex);
+
+    const [abonos] =  useContext(AbonosContext);
+    const [cuentasCobrar] = useContext(CuentaCobrarContex);
 
 
     return (
@@ -18,10 +17,7 @@ export const CuentasCobrarScreen = () => {
             <div className='clientes-container'>
                 <CuentasTopBar />
                 <CuentasSrchAddBar cuentasCobrar={cuentasCobrar}/>
-                <CuentasTable abonos={abonos} clientes={clientes} cuentasCobrar={cuentasCobrar}/>
-                <pre>{JSON.stringify(abonos, null, 3)}</pre>
-
-                
+                <CuentasTable abonos={abonos} cuentasCobrar={cuentasCobrar}/>                
             </div>
         </div>
     )

@@ -1,11 +1,11 @@
 import React from 'react'
-import {TableRow, TableCell} from '@mui/material';
 import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord';
+import {TableRow, TableCell} from '@mui/material';
 
 import './clientes.css';
 
 
-export const ClientesTableList = ({cliente}) => {
+export const ClientesTableList = ({ cliente }) => {
   
     return (
         <>

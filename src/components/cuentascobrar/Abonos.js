@@ -1,6 +1,7 @@
-import React, { useState, useEffect, useContext } from 'react'
-import {TableRow, TableCell} from '@mui/material';
+import React, { useState, useEffect } from 'react'
 import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord';
+import {TableRow, TableCell} from '@mui/material';
+
 import { CuentasOpenBTN } from './CuentasOpenBTN';
 import { getAbonosId } from '../../helpers/getAbonos'
 
@@ -17,16 +18,15 @@ export const Abonos = ({cc}) => {
         fetchAbonosId(cc.id)
     },[])
 
-    const totalAbonos = abonos.map(abn => (abn.monto)).reduce((ab,sum) => ab+sum,0)
+    const totalAbonos = abonos.map(abn => (abn.monto)).reduce((a, b) => a+b, 0)
     const saldoRestante = cc.total_original - totalAbonos 
 
     return (
         <>
-           <TableRow 
-                onClick={() => console.log("id de"+ cc.cliente_nombre+" " + cc.id + " Numero facturo " + cc.numero_factura)}
+           <TableRow
                 key={cc.id}
-                sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
-                
+                sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+            >
                 <TableCell>
                 <div className='cell-cliente'>  
                     <span><p>{cc.cliente_nombre}</p></span>
@@ -42,7 +42,7 @@ export const Abonos = ({cc}) => {
                     {totalAbonos}
                 
                 </TableCell>
-                <TableCell align="center">¢{ (saldoRestante <= 0) ? 0 : saldoRestante} </TableCell>
+                <TableCell align="center">¢{ ( saldoRestante <= 0 ) ? 0 : saldoRestante } </TableCell>
                 <TableCell align="right">
                     {(saldoRestante <= 0) ? 
                         <div className='cl-state'><FiberManualRecordIcon sx={{ fontSize: '9px', color:'green'}} /><span >Pagado</span></div>

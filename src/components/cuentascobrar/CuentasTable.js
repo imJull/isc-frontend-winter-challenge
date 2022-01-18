@@ -1,19 +1,19 @@
 
+import Paper from '@mui/material/Paper';
 import Table from '@mui/material/Table';
 import TableCell from '@mui/material/TableCell';
 import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
-import Paper from '@mui/material/Paper';
+
 import { CuentasTableList } from './CuentasTableList';
-import { CuentasTableList2 } from './CuentasTableList2';
 
 
-export const CuentasTable = ({abonos, clientes, cuentasCobrar, }) => {
+export const CuentasTable = ({abonos, cuentasCobrar, }) => {
 
   return (
 
-      <TableContainer component={Paper}>
+    <TableContainer component={Paper}>
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
         <TableHead>
           <TableRow>
@@ -26,12 +26,9 @@ export const CuentasTable = ({abonos, clientes, cuentasCobrar, }) => {
             <TableCell align="center">Estado</TableCell>
           </TableRow>
         </TableHead>
-        
-         
-            {/* <CuentasTableList abonos={abonos} clientes={clientes} cuentasCobrar={cuentasCobrar} /> */}
-            <CuentasTableList2 abonos={abonos} clientes={clientes} cuentasCobrar={cuentasCobrar}/>
-         
-        
+      
+            <CuentasTableList abonos={abonos} cuentasCobrar={cuentasCobrar}/>
+          
       </Table>
     </TableContainer>
    

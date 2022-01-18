@@ -1,18 +1,19 @@
 import { useState } from 'react';
+import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
-import TextField from '@mui/material/TextField';
+import Checkbox from '@mui/material/Checkbox';
 import Dialog from '@mui/material/Dialog';
 import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
-import InputLabel from '@mui/material/InputLabel';
-import MenuItem from '@mui/material/MenuItem';
 import DialogTitle from '@mui/material/DialogTitle';
 import FormControlLabel from '@mui/material/FormControlLabel';
-import Checkbox from '@mui/material/Checkbox';
-import Select from '@mui/material/Select';
 import FormGroup from '@mui/material/FormGroup';
-import Box from '@mui/material/Box';
+import InputLabel from '@mui/material/InputLabel';
+import MenuItem from '@mui/material/MenuItem';
+import Select from '@mui/material/Select';
+import TextField from '@mui/material/TextField';
+
 import { postClientes } from '../../helpers/postClientes';
 import { postCuentasCobrar } from '../../helpers/postCuentasCobrar';
 
@@ -60,7 +61,7 @@ export const ClienteAdd = ({open, handleClose}) => {
 
               setTimeout(() => {
                 window.location.reload();
-              },2000)
+              },1500)
               
             }
             

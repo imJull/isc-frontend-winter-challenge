@@ -5,9 +5,8 @@ import { CuentasAbonarModal } from "./CuentasAbonarModal";
 export const CuentasOpenBTN = ({cc, saldoRestante}) => {
   const [open, setOpen] = useState(false);
 
-  const handleClickOpen = (id) => {
+  const handleClickOpen = () => {
     setOpen(true);
-    console.log(id)
   };
 
 
@@ -21,7 +20,7 @@ export const CuentasOpenBTN = ({cc, saldoRestante}) => {
       <Button
         disabled={saldoRestante <= 0}
         variant="contained"
-        onClick={() => handleClickOpen(cc.id) }
+        onClick={() => handleClickOpen() }
       >
         Abonar
       </Button>
