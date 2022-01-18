@@ -20,10 +20,12 @@ export const CuentasAbonarModal = ({ cc, open, handleClose }) => {
 
     const [metodoPago] = useState("Efectivo");
     const [efectivo, setEfectivo] = useState(300);
-    const {id} = cc
+    const {id, cliente_nombre} = cc
   
 
     const handleAbonar = () => {
+      const mensaje = cliente_nombre + " ¿Está seguro de abonar ₡" + efectivo + " a su cuenta por cobrar?"
+      if (window.confirm(mensaje) === true){
         const abono = {          
           metodo_de_pago: metodoPago,
           monto: Number(efectivo),
@@ -33,6 +35,8 @@ export const CuentasAbonarModal = ({ cc, open, handleClose }) => {
         setTimeout(() => {
           window.location.reload()
         },1000)
+        
+      }
         
     }
 
